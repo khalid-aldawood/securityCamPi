@@ -82,7 +82,12 @@ This is a smart security camera project connected with a raspberry pi and a MERN
    ```sh
    npm install
    ```
-3. To run 
+
+3. Enter your website url in `sensor.js`
+   ```JS
+   let uri = 'ENTER YOUR URL';
+
+4. To run 
    ```sh
    node sensors.js
    ```
