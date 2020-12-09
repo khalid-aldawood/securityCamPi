@@ -7,6 +7,7 @@ console.log("hello world");
 
 let prevpeople = [];
 let prevtemp = -1;
+let uri = 'http://192.168.1.33:5000';
 const wCap = new cv.VideoCapture(0)
 
 wCap.set(cv.CAP_PROP_FRAME_WIDTH,466);
@@ -123,7 +124,7 @@ function getRandomInt(min, max) {
 }
 
 let objectdetection = false;
-socket = io('http://192.168.1.33:5000');
+socket = io(uri);
 socket.on('connect', ()=>{console.log("connected")});
 socket.on('trigger', async(cb)=>{
 
@@ -142,13 +143,13 @@ if(!err){
 socket.emit('temp',temp);
 if(temp > 40 && prevtemp < 40){
 //save the sensor reading
-axios.post('http://192.168.1.33:5000/api/storedinfo',{type:"temperature",value:`${temp}c`,alert:true});
+axios.post(uri+'/api/storedinfo',{type:"temperature",value:`${temp}c`,alert:true});
 prevtemp = temp;
 }
 
 else if(temp < 40){prevtemp = temp;}
 
-if(getRandomInt(1,1000) == 5 && temp < 40){axios.post('http://192.168.1.33:5000/api/storedinfo',{type:"temperature",value:`${temp}c`,alert:false});}
+if(getRandomInt(1,1000) == 5 && temp < 40){axios.post(uri+'/api/storedinfo',{type:"temperature",value:`${temp}c`,alert:false});}
 
 }
 
@@ -170,7 +171,7 @@ else{fps = 17;}
 //save the webcam reading
 
 if(pred.length > prevpeople.length){
-axios.post('http://192.168.1.33:5000/api/storedinfo',{type:"people",value:`${pred.length}`,alert:true});
+axios.post(uri+'/api/storedinfo',{type:"people",value:`${pred.length}`,alert:true});
 prevpeople = pred;
 }
 
@@ -179,7 +180,7 @@ prevpeople = pred;
 }
 
 else if(getRandomInt(1,2400) == 5 && pred.length == 0){
-axios.post('http://192.168.1.33:5000/api/storedinfo',{type:"people",value:`${pred.length}`,alert:false});
+axios.post(uri+'/api/storedinfo',{type:"people",value:`${pred.length}`,alert:false});
 }
 //send webcame images to the server
 const image = cv.imencode('.jpg',frame).toString('base64');
