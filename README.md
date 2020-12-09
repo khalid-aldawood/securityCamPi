@@ -1,3 +1,108 @@
+<br />
+<p align="center">
+  <p align="center">
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+  </p>
+</p>
+
+
+
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#Website-installation">Website installation</a></li>
+        <li><a href="#Raspberry-Pi-installation">Raspberry Pi installation</a></li>
+        
+      </ul>
+  </ol>
+</details>
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[website](https://0b263fa228d8.ngrok.io/).
+
+This is a smart security camera project connected with a raspberry pi and a MERN stack interface.
+
+### Built With
+
+* [opencv](https://opencv.org/)
+* [react](https://reactjs.org/)
+* [nodejs](https://nodejs.org/en/)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+* nodejs
+* python
+* opencv
+  ```sh
+  pip3 install opencv-python
+  ```
+
+### Website installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/khalid-aldawood/securityCamPi.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Enter your url to connect to your mongodb atlas in `key.js`
+   ```sh
+   dbPassword = 'ENTER YOUR URL';
+
+5. Enter your website url in `URI.js`
+   ```JS
+   const url = 'ENTER YOUR URL';
+
+### Raspberry Pi installation
+
+1. Clone the repo from your Raspberry Pi
+   ```sh
+   git clone https://github.com/khalid-aldawood/securityCamPi.git
+   ```
+2. Install NPM packages from raspberrypi/sensors
+   ```sh
+   npm install
+   ```
+3. To run 
+   ```sh
+   node sensors.js
+   ```
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
