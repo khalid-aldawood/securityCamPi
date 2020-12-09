@@ -1,17 +1,9 @@
 <br />
-<p align="center">
-  <p align="center">
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
-  </p>
-</p>
+<h2 align="center">
+
+[website](https://0b263fa228d8.ngrok.io/)
+
+</h2>
 
 
 
@@ -31,7 +23,6 @@
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#Website-installation">Website installation</a></li>
         <li><a href="#Raspberry-Pi-installation">Raspberry Pi installation</a></li>
-        
       </ul>
   </ol>
 </details>
@@ -40,8 +31,6 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-[website](https://0b263fa228d8.ngrok.io/).
 
 This is a smart security camera project connected with a raspberry pi and a MERN stack interface.
 
