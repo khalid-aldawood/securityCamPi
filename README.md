@@ -47,7 +47,6 @@ This is a smart security camera project connected with a raspberry pi and a MERN
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
 * nodejs
 * python
 * opencv
